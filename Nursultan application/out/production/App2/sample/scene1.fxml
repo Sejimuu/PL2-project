@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="javafx-sdk-11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane fx:id="myplane" prefHeight="493.0" prefWidth="780.0" styleClass="ImageView">
+         <stylesheets>
+            <URL value="@style.css" />
+         </stylesheets>
+         <children>
+            <Button fx:id="Button" layoutX="455.0" layoutY="431.0" mnemonicParsing="false" onAction="#displayImage" prefHeight="38.0" prefWidth="118.0" text="Next" />
+            <BorderPane fx:id="mainPane" layoutX="-1.0" layoutY="1.0" prefHeight="389.0" prefWidth="254.0">
+               <bottom>
+                  <Button fx:id="btn_exit" mnemonicParsing="false" onAction="#onClick_btn_exit" prefHeight="25.0" prefWidth="117.0" text="Exit" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="60.0" />
+                     </BorderPane.margin>
+                  </Button>
+               </bottom>
+               <center>
+                  <Button fx:id="btnScene2" mnemonicParsing="false" onAction="#handleBtn2" prefHeight="25.0" prefWidth="158.0" text="University Info" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Button fx:id="btnScene1" mnemonicParsing="false" onAction="#handleBtn1" prefHeight="25.0" prefWidth="100.0" text="About Info" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets top="60.0" />
+                     </BorderPane.margin>
+                  </Button>
+               </top>
+            </BorderPane>
+            <ImageView fx:id="ImageView" fitHeight="389.0" fitWidth="532.0" layoutX="248.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@meme1.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
